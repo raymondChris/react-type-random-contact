@@ -1,0 +1,15 @@
+.detail-container {
+  padding: 25px;
+}
+
+.detail-subtitle {
+  color: gray;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detail-content {
+  color: black;
+  margin-top: 5px;
+  font-size: 40px;
+}
