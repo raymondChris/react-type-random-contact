@@ -1,5 +1,6 @@
 .cockpit-container {
-  width: 100%;
-  background-color: red;
-  padding: 5px;
+  padding: 0px 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

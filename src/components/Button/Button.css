@@ -1,0 +1,9 @@
+button {
+  background-color: skyblue;
+  border: none;
+  width: 90px;
+  height: 50px;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-top: 40px;
+}

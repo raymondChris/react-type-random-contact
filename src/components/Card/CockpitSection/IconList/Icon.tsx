@@ -2,12 +2,12 @@ import { FC } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUser, faEnvelope, faBirthdayCake, faMapMarked, faPhone, faLock} from '@fortawesome/free-solid-svg-icons'
 
-import {IIconProp} from '../../shared/interfaces'
-import {IconEnum} from '../../shared/enums'
+import {IIconProp} from '../../../../shared/interfaces'
+import {IconEnum} from '../../../../shared/enums'
 
-const Icon: FC<IIconProp> = (props) => {
+import './Icon.css'
 
-    const {onHover, active, type} = props
+const Icon: FC<IIconProp> = ({index, onHover, active, type}) => {
 
     let icon
     switch (type) {
@@ -23,12 +23,18 @@ const Icon: FC<IIconProp> = (props) => {
     }
 
     return (
-            <FontAwesomeIcon
-                onMouseOver={onHover}
-                color={active ? 'skyblue' : 'grey'}
-                size="2x"
-                icon={icon}
-            /> 
+        <div className="icon-container">
+        <div className="icon-active_border" style={{visibility: active === type ? 'visible': 'hidden'}}>
+        </div> 
+        <FontAwesomeIcon
+            className="icon"
+            style={{cursor: 'pointer'}}
+            onMouseOver={() => onHover(index)}
+            color={active === type ? 'royalblue': 'lightgrey'}
+            size="2x"
+            icon={icon}
+        /> 
+        </div>
     )
 }
 
